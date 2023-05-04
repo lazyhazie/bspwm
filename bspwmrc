@@ -7,8 +7,6 @@ $HOME/.config/polybar/launch.sh &
 picom &
 #nitrogen --restore &																		# Restore last desktop wallpaper
 feh --bg-scale --randomize ~/Pictures/Wallpaper/* &			# Set random desktop wallpaper
-volumeicon &
-nm-applet &
 
 # Display Correct Mouse Cursor
 
@@ -20,7 +18,7 @@ xset s off -dpms &																			# Disables screen blanking and power saving
 
 # Workspace Configuration
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4 5 6
 
 bspc config border_width         0
 bspc config window_gap          10
@@ -32,6 +30,3 @@ bspc config gapless_monocle      true
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Alacritty desktop='^1' follow=on
 bspc rule -a firefox desktop='^2' follow=on
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
